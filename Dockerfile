@@ -22,8 +22,9 @@ RUN cd /tmp && \
     rm spark-${APACHE_SPARK_VERSION}-bin-without-hadoop.tgz
 RUN cd /usr/local && ln -s spark-${APACHE_SPARK_VERSION}-bin-without-hadoop spark
 
+USER jovyan
+
 # Install jupyter-scala
 RUN curl -L -o jupyter-scala https://git.io/vzhRi && \
-    chmod +x jupyter-scala && \
-    ./jupyter-scala && \
+    sh jupyter-scala && \
     rm -f jupyter-scala
