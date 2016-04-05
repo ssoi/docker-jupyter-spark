@@ -17,7 +17,7 @@ RUN apt-get -y update && \
 
 # Download Spark
 RUN cd /tmp && \
-    curl -L -O http://d3kbcqa49mib13.cloudfront.net/spark-${APACH_SPARK_VERSION}-bin-without-hadoop.tgz && \
+    curl -L -O http://d3kbcqa49mib13.cloudfront.net/spark-${APACHE_SPARK_VERSION}-bin-without-hadoop.tgz && \
     tar xzf spark-${APACHE_SPARK_VERSION}-bin-without-hadoop.tgz -C /usr/local && \
     rm spark-${APACHE_SPARK_VERSION}-bin-without-hadoop.tgz
 RUN cd /usr/local && ln -s spark-${APACHE_SPARK_VERSION}-bin-without-hadoop spark
