@@ -2,6 +2,12 @@ FROM jupyter/minimal-notebook
 
 USER root
 
+# Install curl
+RUN apt-get -y update && \
+    apt-get install -y --no-install-recommends libcurl3 curl && \
+    apt-get clean && \
+    rm -rf /var/lib/apt/lists/*
+
 # Install JVM
 ENV APACHE_SPARK_VERSION 1.6.0
 RUN apt-get -y update && \
