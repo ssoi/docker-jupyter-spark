@@ -2,9 +2,14 @@ FROM jupyter/minimal-notebook
 
 USER root
 
-# Install curl
+# Install pre-requisites
 RUN apt-get -y update && \
-    apt-get install -y --no-install-recommends libcurl3 curl && \
+    apt-get install -y --no-install-recommends \
+      libcurl3 \
+      curl \
+      imagemagick \
+      libmagick++-dev \
+      libmagic-dev && \
     apt-get clean && \
     rm -rf /var/lib/apt/lists/*
 
