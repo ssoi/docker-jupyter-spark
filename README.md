@@ -19,5 +19,5 @@ Point your favorite browser to `localhost:8888` and create a Scala 2.11 notebook
 
 In th `examples/` folder I have started with a simple Spark example for calculating pi in parallel.
 
-I hope to be soon adding an example utilizing [Bokeh](http://bokeh.pydata.org/en/latest/) with
-[Scala bindings](http://nbviewer.jupyter.org/urls/gist.githubusercontent.com/chilang/b28319c2955d76219001/raw/645d4df74186548752a43f93eec3880e4e0d27d1/Bokeh.ipynb).
+I hope to be soon adding an example utilizing [Lightning-Viz](http://lightning-viz.org/) with
+[Scala bindings](https://github.com/lightning-viz/lightning-example-notebooks/blob/master/scala/graphx.ipynb).
